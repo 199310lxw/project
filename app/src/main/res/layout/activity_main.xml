@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F1A9A9"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radio_button_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/homepage_tab_img_selector"
+                android:layout_gravity="center"
+                android:text="首页"
+                android:textColor="@drawable/homepage_tab_txt_selector"
+                android:gravity="center"
+                android:button="@null"/>
+            <RadioButton
+                android:id="@+id/radio_button_dynamic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/homepage_tab_img_selector"
+                android:layout_gravity="center"
+                android:text="动态"
+                android:textColor="@drawable/homepage_tab_txt_selector"
+                android:gravity="center"
+                android:button="@null"/>
+            <RadioButton
+                android:id="@+id/radio_button_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/homepage_tab_img_selector"
+                android:layout_gravity="center"
+                android:text="消息"
+                android:textColor="@drawable/homepage_tab_txt_selector"
+                android:gravity="center"
+                android:button="@null"/>
+            <RadioButton
+                android:id="@+id/radio_button_user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/homepage_tab_img_selector"
+                android:layout_gravity="center"
+                android:text="用户中心"
+                android:textColor="@drawable/homepage_tab_txt_selector"
+                android:gravity="center"
+                android:button="@null"/>
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

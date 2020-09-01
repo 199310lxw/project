@@ -1,0 +1,12 @@
+include ':baseModule'
+include ':baseModule'
+include ':modules:user'
+include ':modules:message'
+include ':modules:dynamic'
+include ':modules:home'
+include ':modules'
+rootProject.name = "ComponentDemo"
+
+include ':common_UI'
+include ':commonComponent'
+include ':app'
