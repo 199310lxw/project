@@ -17,18 +17,25 @@ import com.gyf.immersionbar.ImmersionBar;
  * @Description : 
  ************************************/
 public class BaseActivity  extends AppCompatActivity {
+    private ImmersionBar mImmersionBar = null;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initBar();
     }
    private void initBar() {
-       ImmersionBar
+       mImmersionBar = ImmersionBar.with(this);//初始化
+       mImmersionBar
                .with(this)
-               .fullScreen(true)                     //有导航栏的情况下，Activity是否全屏显示
+//                .fullScreen(true)                     //有导航栏的情况下，Activity是否全屏显示
                .statusBarDarkFont(true)              //状态栏字体深色或亮色
                .statusBarColor(R.color.white)        //状态栏颜色
-//               .navigationBarColor(R.color.white)    //导航栏颜色
+               .navigationBarColor(R.color.white)
                .init();
    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
